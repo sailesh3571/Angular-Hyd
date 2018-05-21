@@ -6,36 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Iterators</title>
     <script>
-        var batman = {
-            title : "Batman",
-            fname : "Bruce",
-            lname : "Wayne",
-            fullname : function(city){
-                return this.fname+" "+this.lname+" is from "+city
-            }
-        };
-        var superman = {
-            title : "Superman",
-            fname : "Clark",
-            lname : "Kent"
-        };
-        var spiderman = {
-            title : "Spiderman",
-            fname : "Peter",
-            lname : "Parker"
-        };
-        console.log(batman.fullname("Gotham"));// Bruce Wayne
-        console.log(batman.fullname.call(superman, "Metropolis"));// Clark Kent
-        console.log(batman.fullname.call(spiderman, "New York"));// Clark Kent
-        console.log("+++++++++++++++++++++++")
-        console.log(batman.fullname.apply(superman,["Metropolis"]));// Clark Kent
-        console.log(batman.fullname.apply(spiderman,["New York"]));// Clark Kent
-        console.log("+++++++++++++++++++++++");
-        var superfun = batman.fullname.bind(superman)
-        var spiderfun = batman.fullname.bind(spiderman)
-        console.log(superfun("Metropolis"));// Clark Kent
-        console.log(spiderfun("New York"));// Clark Kent
-        // batman.fullname.bind(superman)("Metropolis");
+        /*
+       let powers = [3,7,1,9,2,8];
+       powers.forEach(function(value, index, array){
+        console.log(value, index, array)
+       });
+        */
+        /*
+        */
+       let powers = [3,7,1,9,2,8];
+       let heroes = [
+           {
+               title : "Batman",
+               power : 7
+           },
+           {
+               title : "Superman",
+               power : 8
+           },
+           {
+               title : "Ironman",
+               power : 6
+           },
+           {
+               title : "Spiderman",
+               power : 7
+           }
+       ];
+      console.log( powers.sort() );
+      // console.log( heroes.sort() );
+      function sortfun(hero1, hero2){
+          if(hero1.power < hero2.power){
+              return 1
+          }else if(hero1.power > hero2.power){
+             return -1
+          }else{
+            return 0
+          }
+      }
+     console.log( heroes.sort(sortfun) );
+
     </script>
 </head>
 <body>
