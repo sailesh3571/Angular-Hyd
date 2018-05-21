@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- http://www.github.com/vijay-sk/ibm-hyderabad-day1 -->
+    <script>
+       // document.write("Hello World");
+       /*
+       window.onload = function(){
+           document.getElementsByTagName("h1")[0].innerHTML = "Hello World";
+       }
+       */
+       /*
+       window.addEventListener("load",function(){
+           document.getElementsByTagName("h1")[0].innerHTML = "Hello World";
+       });
+       */
+       /*
+       document.addEventListener("DOMContentLoaded", function(){
+           document.getElementsByTagName("h1")[0].innerHTML = "Hello World";
+       })
+       */
+       function bodyonload(){
+           console.log("Body Onload Event Fired")
+       }
+       window.addEventListener("load",function(){
+           console.log("Window Onload Event Fired")
+       });
+        document.addEventListener("DOMContentLoaded", function(){
+            console.log("Document DOMContentLoaded Event Fired")
+        })
+    </script>
+</head>
+<body onload="bodyonload()">
+    <h1></h1>
+</body>
+</html>
