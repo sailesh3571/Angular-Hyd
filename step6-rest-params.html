@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rest Parameters</title>
+    <script>
+        // ES5
+        /*
+       function addit(){
+         //  arguments.length;
+         //  arguments[];
+         var tempval = 0;
+           for( var i = 0 ; i < arguments.length ; i++){
+                tempval += arguments[i]
+           };
+           return tempval;
+       };
+        */
+        // ES6 // REST Arguments
+       function addit(...nums){
+         var tempval = 0;
+           for( var i = 0 ; i < nums.length ; i++){
+                tempval += nums[i]
+           };
+           return tempval;
+       };
+       console.log(addit(1,2));// 3
+       console.log(addit(1,2,3));// 3
+       console.log(addit(1,2,3,4));// 3
+       console.log(addit(1,2,3,4,5));// 3
+       console.log(addit(1));// NaN
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
