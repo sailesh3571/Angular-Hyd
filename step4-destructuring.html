@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring</title>
+    <script>
+        var hero = {
+            title : "Batman",
+            fname : "Bruce",
+            lname : "Wayne",
+            city : "Gotham"
+        };
+        var temphero = hero;
+    console.log(temphero.title);// Batman
+    console.log(temphero.city);// Gotham
+    console.log(hero.title);// Batman
+    console.log(hero.city);// Gotham
+
+    console.log("--------------------------");// Gotham
+//  temphero.title = "Joker";// Joker
+    console.log(temphero.title);// Batman
+    console.log(hero.title);// Batman
+/*
+    var htitle = hero.title;
+    var hfname = hero.fname;
+    var hlname = hero.lname;
+    var hcity = hero.city;
+*/
+
+/*
+    var htitle = hero.title, 
+        hfname = hero.fname,
+        hlname = hero.lname, 
+        hcity = hero.city;
+
+    console.log(htitle);
+    htitle = "joker";
+    console.log(htitle);
+    console.log(hero.title);// Batman
+*/
+
+let { title : htitle, fname: hfname, lname : hlname, city : hcity} = hero;
+let { title , fname, lname, city } = hero;
+console.log(htitle, hcity, hfname, hlname);
+console.log(title, city, fname, lname);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
