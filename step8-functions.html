@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions</title>
+    <script>
+        /*
+        if(fun2 in window){
+            console.log(" fun2 exists ", fun2);
+            
+        }else{
+            console.log(" fun2 do not xist ")
+        }
+        function fun1(){
+            console.log("hello from fun1")
+        };
+        var fun2 = function(){
+            console.log("hello from fun2")
+        };
+        // window.fun2();
+        */
+    // var somefun = ( msg,greeting )=> greeting+msg ;
+    /*
+    var somefun = (...args) => args[1]+args[0] ;
+    console.log( somefun("Hi","window says ") );
+    */
+    var cart = {
+        productValue : function(){
+            return 100
+        },
+        salesValue : function(){
+            //var self = this;
+            var calculatetax = () => this.productValue() * 0.2;
+            // return calculatetax.call(this) + this.productValue();
+            // return calculatetax.apply(this) + this.productValue();
+            // return calculatetax.bind(this)() + this.productValue();
+            return calculatetax() + this.productValue();
+        }
+    };
+    console.log(cart.salesValue());// 120
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
